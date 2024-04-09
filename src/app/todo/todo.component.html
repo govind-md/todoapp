@@ -1,0 +1,21 @@
+<div class="todo_cont">
+    
+    <section class="todo_ctrl1">
+        <input type="checkbox" name="Completed" id="Completed" [checked]="_todo.isCompleted" [(ngModel)]="_todo.isCompleted" (change)="toggle('complete')">
+    </section>
+    <!-- <button (click)="log(_todo)"></button> -->
+    <article *ngIf="!_todo.isEditable" class="todo_content">{{_todo.task}}</article>
+    <textarea *ngIf="_todo.isEditable" type="text" name="edittext" class="edit_input" [value]="_todo.task" [(ngModel)]="_todo.task"></textarea>
+
+    <section class="todo_ctrl2">
+
+        <svg *ngIf="!_todo.isEditable" (click)="toggle('edit')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.7574 2.99677L9.29145 10.4627L9.29886 14.7098L13.537 14.7024L21 7.23941V19.9968C21 20.5491 20.5523 20.9968 20 20.9968H4C3.44772 20.9968 3 20.5491 3 19.9968V3.99677C3 3.44448 3.44772 2.99677 4 2.99677H16.7574ZM20.4853 2.09727L21.8995 3.51149L12.7071 12.7039L11.2954 12.7063L11.2929 11.2897L20.4853 2.09727Z"></path></svg>
+
+        <svg *ngIf="_todo.isEditable" (click)="toggle('save')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 21V13H6V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H17L21 7V20C21 20.5523 20.5523 21 20 21H18ZM16 21H8V15H16V21Z"></path></svg>
+
+        <svg (click)="toggle('delete')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" ><path d="M4 8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8ZM7 5V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V5H22V7H2V5H7ZM9 4V5H15V4H9ZM9 12V18H11V12H9ZM13 12V18H15V12H13Z"></path></svg>
+
+    </section>
+
+
+</div>

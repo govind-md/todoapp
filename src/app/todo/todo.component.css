@@ -1,0 +1,34 @@
+.todo_cont{
+    width: 350px;
+    height: 150px;
+    background-color: antiquewhite;
+    display: flex;
+    column-gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.todo_ctrl1{
+    width: 20px;
+    position: relative;
+    top: 5px;
+}
+.todo_content{
+    width: calc(350px - 60px);
+    position: relative;   
+}
+.edit_input{
+    width: calc(350px - 60px);
+    box-sizing: border-box;
+    padding: 4px;
+}
+.todo_ctrl2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20px;
+}
+.todo_ctrl2 > svg{
+    width: 20px;
+    height: 20px;
+}

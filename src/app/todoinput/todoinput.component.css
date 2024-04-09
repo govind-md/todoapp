@@ -1,0 +1,13 @@
+.todosinputcont{
+    width: 100%;
+    padding: 10px 0;
+}
+.inp_form > input{
+    width: 80%;
+    height: 20px;
+    margin-right: 10px;
+}
+.inp_form > button{
+    width: fit-content;
+    padding: 4px 10px;
+}

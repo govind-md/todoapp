@@ -1,0 +1,8 @@
+<div class="todosinputcont">
+    <section>
+        <form (ngSubmit)="sendData()" class="inp_form">
+            <input type="text" [value]="input" [(ngModel)]="input" name="todoinput">
+            <button type="submit">Add</button>
+        </form>
+    </section>
+</div>

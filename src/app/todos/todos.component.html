@@ -1,0 +1,15 @@
+<div class="todoscont">
+    <app-todoinput (taskdata)="addTask($event)"></app-todoinput>
+
+    
+    <div>
+        <app-todo 
+                *ngFor="let todo of todos;let i = index" 
+                [_todo]="todo"
+                [index]="i" 
+                (newTaskValue)="editTask($event)" 
+                (toggleComplete)="completeTask($event)" 
+                (deleteTask)="deleteTask($event)" >
+        </app-todo>
+    </div>
+</div>
